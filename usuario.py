@@ -10,7 +10,7 @@ def Login():
   principal.destroy()
 
   tela_login = Tk()
-  tela_login.title('Planner')
+  tela_login.title('BEM VINDO(A) AO PLANNER')
   tela_login.configure(background = '#1E90FF')
   tela_login.geometry('700x500+500+500') 
 
