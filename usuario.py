@@ -1,5 +1,5 @@
 from tkinter import *
-from usuario import *
+from calendario import *
 
 global usuarios, emails, senhas
 usuarios = []
@@ -8,66 +8,71 @@ senhas = []
 
 def Login():
   principal.destroy()
-
+  
   tela_login = Tk()
   tela_login.title('EFETUAR LOGIN')
-  tela_login.configure(background = '#1E90FF')
+  tela_login.configure(background = '#0B2161')
   tela_login.geometry('700x500+500+500') 
+  
+  label_login = Label(tela_login, text = 'LOGIN', background = '#0B2161')
+  label_login.place(x = 296, y = 20)
 
-  label2 = Label(text = 'LOGIN', background = '#1E90FF')
-  label2.place(x = '296', y = '20')
+  label1 = Label(tela_login, text = 'Email', background = '#0B2161')
+  label1.place(x = 300, y = 65)
+  
+  entrada1 = Entry(tela_login, justify = CENTER)
+  entrada1.place(x = 240, y = 85)
 
-  label3 = Label(text = 'Email', background = '#1E90FF')
-  label3.place(x = '300', y = '65')
-  entrada1 = Entry(email)
-  entrada1.place(x = '240', y = '85')
-
-  label4 = Label(text = 'Senha', background = '#1E90FF')
-  label4.place(x = '300', y = '125')
-  entrada2 = Entry(senha)
-  entrada2.place(x = '240', y = '145')
-
-  botao3 = Button(tela_login, command = bt_click3, text = 'ENTRAR')
-  botao3.place(x = '285', y = '185')
+  label2 = Label(tela_login, text = 'Senha', background = '#0B2161')
+  label2.place(x = 300, y = 125)
+  
+  entrada2 = Entry(tela_login, justify = CENTER)
+  entrada2.place(x = 240, y = 145)
+  # ta faltando def bt_click pra login \\ pra ver se email e senha tao corretos
+  botao_entrar = Button(tela_login, command = bt_click3, text = 'ENTRAR')
+  botao_entrar.place(x = 285, y = 185)
   
 def CriarConta():
   criarConta = Tk()
   criarConta.title('CADASTRE-SE')
-  criarConta.configure(background = '#1E90FF')
-  criarConta.geometry('700x700+500+500')
+  criarConta.configure(background = '#0B2161')
+  criarConta.geometry('700x500+500+500')
   
-  label2 = Label(criarConta,text = 'CRIAR CONTA', background = '#1E90FF')
-  label2.place(x = '275', y = '20')
+  label_cadastro = Label(criarConta, text = 'Cadastro', background = '#85AEF2', foreground = '#0B2161', font = ('Times New Roman', 20))
+  label_cadastro.pack(ipadx = 30, ipady = 30, padx = 1, pady = 1, side = 'top', fill = X, expand = False)
   
-  label3 = Label(criarConta,text = 'Nome de usuário', background = '#1E90FF')
-  label3.place(x = '267', y = '70')
-  entrada1 = Entry(criarConta)
-  entrada1.place(x = '240', y = '90')
+  label1 = Label(criarConta, text = 'User', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label1.place(x = 100, y = 140)
   
-  label4 = Label( criarConta,text = 'Email', background = '#1E90FF')
-  label4.place(x = '300', y = '120')
-  entrada2 = Entry(criarConta)
-  entrada2.place(x = '240', y = '140')
+  entrada1 = Entry(criarConta, justify = CENTER)
+  entrada1.place(x = 105, y = 165)
+  
+  label2 = Label(criarConta, text = 'Email', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label2.place(x = 100, y = 200)
+  
+  entrada2 = Entry(criarConta, justify = CENTER)
+  entrada2.place(x = 105, y = 225)
 
-  label5 = Label( criarConta, text = 'Senha', background = '#1E90FF')
-  label5.place(x = '300', y = '170')
-  entrada3 = Entry(criarConta)
-  entrada3.place(x = '240', y = '190')
+  label3 = Label(criarConta, text = 'Senha', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label3.place(x = 100, y = 260)
   
-  def bt_click3():
-    self.__nome = entrada1.get()
-    self.__email = entrada2.get()
-    self.__senha = entrada3.get()
+  entrada3 = Entry(criarConta, justify = CENTER)
+  entrada3.place(x = 105, y = 285)
+  
+  # por aqui ainda precisa de condição se o usuario colocou todas as infos
+  def bt_clickCriarConta():
+    novoUsuario = entrada1.get()
+    novoEmail = entrada2.get()
+    novaSenha = entrada3.get()
     
-    usuarios.append(self.__nome)
-    email.append(self.__email)
-    senha.append(self.__senha)
-    
+    usuarios.append(novoUsuario)
+    emails.append(novoEmail)
+    senhas.append(novaSenha)
+
     criarConta.destroy()
   
-  botao3 = Button(criarConta, command = bt_click3, text = 'CRIAR')
-  botao3.place(x = '292', y = '230')
-
+  botao_criar = Button(criarConta, command = bt_clickCriarConta, text = 'CRIAR')
+  botao_criar.place(x = 110, y = 340)
+  
   criarConta.mainloop()
-
   Menu()

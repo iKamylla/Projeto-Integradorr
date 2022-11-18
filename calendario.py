@@ -1,41 +1,58 @@
 from tkinter import *
 from usuario import *
 
-
 def Menu():
-  principal = Tk()
-  principal.title('MENU')
-  principal.configure(background = '#045FB4')
-  principal.geometry('700x700+500+500')
+  tela_menu = Tk()
+  tela_menu.title('MENU')
+  tela_menu.configure(background = '#0B2161')
+  tela_menu.geometry('700x500+500+500')
 
-  label6 = Label(text = 'MENU', background = '#1E90FF')
-  label6.place(x = '310', y = '20')
+  label_menu = Label(tela_menu, text = 'MENU', background = '#85AEF2', foreground = '#0B0B3B', font = ('Times New Roman', 20))
+  label_menu.pack(ipadx = 30, ipady = 30, padx = 1, pady = 1, side = 'top', fill = X, expand = False)
   
-  label6_1 = Label(text = '1 - Criar evento', background = '#1E90FF')
-  label6_1.place(x = '280', y = '60')
+  label1 = Label(tela_menu, text = '1 - Criar evento', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label1.place(x = 100, y = 150)
   
-  label6_2 = Label(text = '2 - Acesssar evento', background = '#1E90FF' )
-  label6_2.place(x = '280', y = '80')
+  label2 = Label(tela_menu, text = '2 - Acesssar evento', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label2.place(x = 100, y = 210)
   
-  label6_3 = Label(text = '3 - Sair', background = '#1E90FF')
-  label6_3.place(x = '280', y = '100')
+  label3 = Label(tela_menu, text = '3 - Encerrar sessão', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label3.place(x = 100, y = 270)
   
-  entrada1 = Entry()
-  entrada1.place(x = '280', y = '125')
-  
-  botao1 = Button(principal, command = bt_click, text = 'LOGIN')
-  botao1.place(x = '286', y = '90')
+  # opção 1 vai pra criar evento \\ banco de dados
+  def bt_clickOpcao1():
+    tela_menu.destroy()
+    print('a')
+    
+  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao1, text = '1')
+  botao_criar_evento.place(x = 350, y = 150)
 
+  # opção 2 mostrar lista de eventos \\ banco de dados
+  def bt_clickOpcao2():
+    tela_menu.destroy()
+    print('a')
+    
+  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao2, text = '2')
+  botao_criar_evento.place(x = 350, y = 210)
 
-  # = Button (command = lambda: [screen.destroy(),novatela()])
-  #botao1.place(x = '286', y = '90')
+  # opção 3 encerra a sessão
+  def bt_clickOpcao3():
+    tela_menu.destroy()
+    print('a')
+    
+  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao3, text = '3')
+  botao_criar_evento.place(x = 350, y = 270)
+
+    
+  # = Button(command = lambda: [screen.destroy(),novatela()])
+  #botao_login.place(x = '286', y = '90')
   
 
-def novatela():
-  principal = Tk()
-  principal.title('Planner')
-  principal.configure(background = '#1E90FF')
-  principal.geometry('700x700+500+500')
+#def NovaTela():
+#  principal = Tk()
+#  principal.title('Planner')
+#  principal.configure(background = '#1E90FF')
+#  principal.geometry('700x500+500+500')
 
   #while opcao == 1 or opcao == 2 or opcao == 3:
   #  if opcao == 1:
