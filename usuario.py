@@ -10,7 +10,7 @@ def Login():
   principal.destroy()
 
   tela_login = Tk()
-  tela_login.title('BEM VINDO(A) AO PLANNER')
+  tela_login.title('EFETUAR LOGIN')
   tela_login.configure(background = '#1E90FF')
   tela_login.geometry('700x500+500+500') 
 
@@ -32,14 +32,14 @@ def Login():
   
 def CriarConta():
   criarConta = Tk()
-  criarConta.title('Planner')
+  criarConta.title('CADASTRE-SE')
   criarConta.configure(background = '#1E90FF')
   criarConta.geometry('700x700+500+500')
   
   label2 = Label(criarConta,text = 'CRIAR CONTA', background = '#1E90FF')
   label2.place(x = '275', y = '20')
   
-  label3 = Label( criarConta,text = 'Nome de usuário', background = '#1E90FF')
+  label3 = Label(criarConta,text = 'Nome de usuário', background = '#1E90FF')
   label3.place(x = '267', y = '70')
   entrada1 = Entry(criarConta)
   entrada1.place(x = '240', y = '90')
@@ -58,6 +58,7 @@ def CriarConta():
     self.__nome = entrada1.get()
     self.__email = entrada2.get()
     self.__senha = entrada3.get()
+    
     usuarios.append(self.__nome)
     email.append(self.__email)
     senha.append(self.__senha)

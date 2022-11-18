@@ -8,13 +8,13 @@ senhas = []
 
 def Inicio():
   principal = Tk()
-  principal.title('Planner')
+  principal.title('BEM VINDO(A) AO PLANNER')
   principal.configure(background = '#1E90FF')
   principal.geometry('700x500+500+500') 
 
-  img_logo = PhotoImage(file='logoAzuli.jpeg')
-  logo = Label(principal, image=img_logo).pack()
-  logo.pack(side=RIGHT)
+  #img_logo = PhotoImage(file = 'logoAzuli.jpeg')
+  #logo = Label(principal, image = img_logo).pack()
+  #logo.pack(side = RIGHT)
   
   def bt_click():
     Login()
