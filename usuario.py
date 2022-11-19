@@ -14,16 +14,17 @@ def Login():
   tela_login.configure(background = '#0B2161')
   tela_login.geometry('700x500+500+500') 
   
-  label_login = Label(tela_login, text = 'LOGIN', background = '#0B2161')
+  label_login = Label(tela_login, text = 'LOGIN', 
+                      bg = '#85AEF2', fg = '#0B2161', font = ('Times New Roman', 20))
   label_login.place(x = 296, y = 20)
 
-  label1 = Label(tela_login, text = 'Email', background = '#0B2161')
+  label1 = Label(tela_login, text = 'Email', bg = '#0B2161')
   label1.place(x = 300, y = 65)
   
   entrada1 = Entry(tela_login, justify = CENTER)
   entrada1.place(x = 240, y = 85)
 
-  label2 = Label(tela_login, text = 'Senha', background = '#0B2161')
+  label2 = Label(tela_login, text = 'Senha', bg = '#0B2161')
   label2.place(x = 300, y = 125)
   
   entrada2 = Entry(tela_login, justify = CENTER)
@@ -38,22 +39,27 @@ def CriarConta():
   criarConta.configure(background = '#0B2161')
   criarConta.geometry('700x500+500+500')
   
-  label_cadastro = Label(criarConta, text = 'Cadastro', background = '#85AEF2', foreground = '#0B2161', font = ('Times New Roman', 20))
-  label_cadastro.pack(ipadx = 30, ipady = 30, padx = 1, pady = 1, side = 'top', fill = X, expand = False)
+  label_cadastro = Label(criarConta, text = 'Cadastro', 
+                         bg = '#85AEF2', fg = '#0B2161', font = ('Times New Roman', 20, 'bold'))
+  label_cadastro.pack(ipadx = 30, ipady = 30, padx = 1, pady = 1, 
+                      side = 'top', fill = X, expand = False)
   
-  label1 = Label(criarConta, text = 'User', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label1 = Label(criarConta, text = 'User', 
+                 bg = '#0B2161', fg = 'white', font = ('Times New Roman', 12))
   label1.place(x = 100, y = 140)
   
   entrada1 = Entry(criarConta, justify = CENTER)
   entrada1.place(x = 105, y = 165)
   
-  label2 = Label(criarConta, text = 'Email', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label2 = Label(criarConta, text = 'Email', 
+                 bg = '#0B2161', fg = 'white', font = ('Times New Roman', 12))
   label2.place(x = 100, y = 200)
   
   entrada2 = Entry(criarConta, justify = CENTER)
   entrada2.place(x = 105, y = 225)
 
-  label3 = Label(criarConta, text = 'Senha', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label3 = Label(criarConta, text = 'Senha', 
+                 bg = '#0B2161', fg = 'white',  font = ('Times New Roman', 12))
   label3.place(x = 100, y = 260)
   
   entrada3 = Entry(criarConta, justify = CENTER)
@@ -71,8 +77,9 @@ def CriarConta():
 
     criarConta.destroy()
   
-  botao_criar = Button(criarConta, command = bt_clickCriarConta, text = 'CRIAR')
-  botao_criar.place(x = 110, y = 340)
+  botao_criar = Button(criarConta, command = bt_clickCriarConta, text = 'CRIAR', 
+                       bg = '#85AEF2', font = ('Arial', 10, 'bold'))
+  botao_criar.place(x = 105, y = 330)
   
   criarConta.mainloop()
   Menu()

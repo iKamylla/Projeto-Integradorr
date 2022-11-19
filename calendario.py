@@ -7,16 +7,21 @@ def Menu():
   tela_menu.configure(background = '#0B2161')
   tela_menu.geometry('700x500+500+500')
 
-  label_menu = Label(tela_menu, text = 'MENU', background = '#85AEF2', foreground = '#0B0B3B', font = ('Times New Roman', 20))
-  label_menu.pack(ipadx = 30, ipady = 30, padx = 1, pady = 1, side = 'top', fill = X, expand = False)
+  label_menu = Label(tela_menu, text = 'MENU', 
+                     bg = '#85AEF2', fg = '#0B0B3B', font = ('Times New Roman', 20, 'bold'))
+  label_menu.pack(ipadx = 30, ipady = 30, padx = 1, pady = 1, 
+                  side = 'top', fill = X, expand = False)
   
-  label1 = Label(tela_menu, text = '1 - Criar evento', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label1 = Label(tela_menu, text = '1 - Criar evento',
+                 bg = '#0B2161', fg = 'white', font = ('Times New Roman', 12))
   label1.place(x = 100, y = 150)
   
-  label2 = Label(tela_menu, text = '2 - Acesssar evento', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label2 = Label(tela_menu, text = '2 - Acesssar evento',
+                 bg = '#0B2161', fg = 'white', font = ('Times New Roman', 12))
   label2.place(x = 100, y = 210)
   
-  label3 = Label(tela_menu, text = '3 - Encerrar sessão', background = '#0B2161', foreground = 'white', font = ('Times New Roman', 12))
+  label3 = Label(tela_menu, text = '3 - Encerrar sessão', 
+                 bg = '#0B2161', fg = 'white', font = ('Times New Roman', 12))
   label3.place(x = 100, y = 270)
   
   # opção 1 vai pra criar evento \\ banco de dados
@@ -24,7 +29,8 @@ def Menu():
     tela_menu.destroy()
     print('a')
     
-  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao1, text = '1')
+  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao1, text = 'CRIAR', 
+                              bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'))
   botao_criar_evento.place(x = 350, y = 150)
 
   # opção 2 mostrar lista de eventos \\ banco de dados
@@ -32,7 +38,8 @@ def Menu():
     tela_menu.destroy()
     print('a')
     
-  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao2, text = '2')
+  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao2, text = 'ACESSAR', 
+                              bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'))
   botao_criar_evento.place(x = 350, y = 210)
 
   # opção 3 encerra a sessão
@@ -40,7 +47,8 @@ def Menu():
     tela_menu.destroy()
     print('a')
     
-  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao3, text = '3')
+  botao_criar_evento = Button(tela_menu, command = bt_clickOpcao3, text = 'SAIR', 
+                              bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'))
   botao_criar_evento.place(x = 350, y = 270)
 
     
