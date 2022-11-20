@@ -2,12 +2,6 @@ from tkinter import *
 from usuario import *
 
 
-global usuario, email, senha
-usuario = []
-email = []
-senha = []
-
-
 def Iniciar():
     screen_iniciar = Tk()
     screen_iniciar.title('BEM VINDO(A) AO PLANNER')
