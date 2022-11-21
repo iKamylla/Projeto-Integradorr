@@ -23,26 +23,26 @@ def Menu():
     label_encerrar = Label(screen_menu, text = '3 - Encerrar sessão', bg = '#0B2161', fg = 'white', font = ('Times New Roman', 12))
     label_encerrar.place(x = 100, y = 270)
 
-    def bt_click_criar():
+    def bt_click1():
         screen_menu.destroy()
         Criar_Evento()
 
-    bt_criar_even = Button(screen_menu, text = 'CRIAR', bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'), command = bt_click_criar)
-    bt_criar_even.place(x = 350, y = 150)    
+    bt_criar = Button(screen_menu, text = 'CRIAR', bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'), command = bt_click1)
+    bt_criar.place(x = 350, y = 150)    
       
-    def bt_click_acessar():
+    def bt_click2():
         screen_menu.destroy()
         Acessar_Evento()
 
-    bt_acessar_even = Button(screen_menu, text = 'ACESSAR', bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'), command = bt_click_acessar)
-    bt_acessar_even.place(x = 350, y = 210)
+    bt_acessar = Button(screen_menu, text = 'ACESSAR', bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'), command = bt_click2)
+    bt_acessar.place(x = 350, y = 210)
 
-    def bt_click_sair():
+    def bt_click3():
         screen_menu.destroy()
         Encerrar()
 
-    bt_encerrar = Button(screen_menu, text = 'SAIR', bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'), command = bt_click_sair)
+    bt_encerrar = Button(screen_menu, text = 'SAIR', bg = '#85AEF2', fg = 'black', font = ('Arial', 10, 'bold'), command = bt_click3)
     bt_encerrar.place(x = 350, y = 270)
-
+  
     screen_menu.mainloop()
   
